@@ -32,7 +32,7 @@ class Map<K, V>
 
 	private int getIndex(K key)
 	{
-		int hashCode = key.hashCode();
+		int hashCode = Math.abs(key.hashCode());
 		int index = hashCode % count;
 		return index;
 	}
